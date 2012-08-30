@@ -20,3 +20,9 @@ doc/app
 .bundle
 bin/
 vendor/ruby
+vendor/bundle
+config/database.yml
+config/httpd.conf
+config/*.deployed
+public/down.html
+
