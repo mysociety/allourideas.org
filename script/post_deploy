@@ -1,5 +1,5 @@
 #!/bin/bash
 
 export RAILS_ENV=production
-bundle install --deployment
+bundle install --path vendor/ --binstubs
 bundle exec env rake db:migrate
