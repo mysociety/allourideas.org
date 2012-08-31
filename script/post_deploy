@@ -1,5 +1,15 @@
 #!/bin/bash
 
 export RAILS_ENV=production
-bundle install --deployment
+
+# Can't connect to this server from eclipse, so we will put it in the repo.
+#
+#if [ ! -e "db/GeoLiteCity.dat" ]
+#then
+#  echo "Downloading GeoLiteCity.dat"
+#  curl http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz | gzip -dc > db/GeoLiteCity.dat
+#fi
+
+bundle install --path vendor/ --binstubs
 bundle exec env rake db:migrate
+
