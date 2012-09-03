@@ -67,8 +67,8 @@ ActiveRecord::Schema.define(:version => 20110304211014) do
     t.string   "default_lang",                     :default => "en"
     t.string   "logo_size",                        :default => "medium"
     t.boolean  "flag_enabled",                     :default => false
-    t.string   "ga_code"
     t.boolean  "photocracy",                       :default => false
+    t.string   "ga_code"
   end
 
   add_index "earls", ["question_id"], :name => "index_earls_on_question_id"
